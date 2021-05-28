@@ -1,0 +1,16 @@
+{
+  "require": {
+    "bramus/router": "~1.4",
+    "twig/twig": "^3.0",
+    "thingengineer/mysqli-database-class": "^2.9"
+  },
+  "autoload": {
+    "psr-4": {
+      "Entity\\": "src/",
+      "Controller\\": "src/",
+      "Repository\\": "src/",
+      "Twig\\": "src/"
+    }
+  },
+  "require-dev": {}
+}
