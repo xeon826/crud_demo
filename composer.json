@@ -6,10 +6,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Entity\\": "src/",
-      "Controller\\": "src/",
-      "Repository\\": "src/",
-      "Twig\\": "src/"
+      "Controller\\": "src/"
     }
   },
   "require-dev": {}
