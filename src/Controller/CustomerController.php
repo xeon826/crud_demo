@@ -3,17 +3,10 @@ namespace Controller;
 
 use DateTime;
 
-class CustomerController
+class CustomerController extends Controller
 {
-    public function loginAction()
+    public function indexAction()
     {
-        error_log('asdf');
-        echo 'asdf';
-        echo 'asdf';
-        echo 'asdf';
-        echo 'asdf';
-        echo 'asdf';
-        echo 'asdf';
-        echo 'asdf';
+      echo 'asdf';
     }
 }

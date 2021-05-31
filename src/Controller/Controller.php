@@ -11,13 +11,18 @@ use Twig_SimpleFilter;
 
 class Controller
 {
-    public static $instance;
-    protected $user;
     public $db;
     protected $data = [];
     protected $loader;
     protected $twig;
     protected $asset_path;
-    public $gateway;
-
+    public function __construct()
+    {
+        require $_SERVER['DOCUMENT_ROOT'].'/Connections/parameters.php';
+        $this->loader = new FilesystemLoader($_SERVER['DOCUMENT_ROOT'].'/src/views/');
+        $this->twig = new Environment($this->loader);
+        $this->asset_path = $asset_path;
+        $this->js_bundle_ver = $js_bundle_ver;
+        $this->db = new MysqliDb($parameters);
+    }
 }
