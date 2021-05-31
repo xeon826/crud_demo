@@ -1,0 +1,34 @@
+{
+    "user-add": {
+        "header": "Add User",
+        "paragraphs":["lorem ipsum lorem ipsum", "asdfasdf", "asdfasdfasdf"]
+    },
+    "index": {
+        "header": "Index",
+        "paragraphs":["In the app, you'll find there are four of these, one for <strong>Clients, Users, Schedules, and Records,</strong> these are the tools that you'll use primarily to manage the data in your organization, with the exception of Schedules where you can also use the scheduler if you choose. The input in the top left of these pages will refer to a value of that data that is most commonly used, for instance the most readily searchable value for Users is display name so it will find them based on that. If you click on <strong>\"Advanced Search\"</strong> you'll see there are more criteria upon which you can base your search, they'll pertain to the index you're currently viewing. If you click the <strong>\"Columns\"</strong> button, you'll be able to limit the visible information to a defined set. <br></br>Clicking the <strong>\"Download\"</strong> button will let you export the visible table to your choice of a csv, xls, or xlsx formmated file."]
+    },
+    "users": {
+        "title": "Users",
+        "paragraphs":["From here you can manage all users you have stored in the app. After adding the user a message will be sent to the given email/phone number that holds a link they can use to set their password. If the user has neither of these, click the down arrow in the respective row then click \"Change Password\" to set it for them. Required fields to add a user are <strong>First Name, Last Name, and Login."]
+    },
+    "report": {
+        "title": "Records",
+        "paragraphs":["This is a list of existing clock in and out records. There are a couple differences in this index as opposed to the others, you'll see there's a \"Auto Refresh\" as well as a \"Group By\" button, the latter is used to join the rows based on a criteria such as user, client, or service code."]
+    },
+    "clients" : {
+        "title": "Clients",
+        "paragraphs":["Clients are what you use to organize users according to where they work. In this app, they're referenced as such but you can think of them as departments, locations, or clients if you prefer. From here, you can assign users to their respective client(s) by clicking on the down arrow located in the row then clicking <strong>\"Manage Associations\"</strong>. From here you can assign them a role of <strong>\"Employee\"</strong> or <strong>\"Manager\"</strong>. The difference being that managers will be able to assign and change schedules as well as reports to users that are associated with their respective client. <br><br>Associating a user is a required prerequisite to assigning them a schedule. Each client has the following fields: name, full address, phone number, email, and notes. The only field that's required is name. It's important to consider that <strong>when deleting a client, this will remove all reports and schedules associated with it.</strong>"]
+    },
+    "schedules-index" : {
+        "title": "Schedule Index",
+        "paragraphs":["Here you will find a list of times, all days, milestones, and tasks. Each has a preset of fields given to it. Times are best suited for assigning a standard daily schedule, it includes a begin and end. Tasks include only a start but also a title and description and can be used to give an indication of what task must be done to whoever it's assigned to. Milestones are best suited for marking things like the beginning or end of a project. All days are similar to tasks but instead encompass an entire date, so as opposed to have a specific time as with tasks, these are best used to indicate that a thing a must be done at a certain point in the day or night without must urgency given to a specific time."]
+    },
+    "schedules-calendar" : {
+        "title": "Scheduler",
+        "paragraphs":["This is an alternative view of schedules you have stored in the app, you can click on a client in the left column (or dropdown at the top if you're on mobile) to show its respective schedules. To add schedules you can click the plus button or on a blank space in the scheduler. In this screen you'll also see <strong>\"Templates\"</strong>. These can be used to create a weekly set of times for employees to work. Pasting the template will add them to the current view you have open. For instance if you're current seeing the Monthly view, pasting a template will add it four times. Schedules assigned to the same employee cannot overlap, doing this will result in an error."]
+    },
+    "my-schedules" : {
+        "title": "My Schedules",
+        "paragraphs":["This is a list of times that you're scheduled to work. You can click on one of the cards to automatically clock yourself in. Or you can do it manually by clicking on the icon at the bottom right where you'll be prompted to enter a service code and client. To clock out, simply press the red stop button."]
+    }
+}

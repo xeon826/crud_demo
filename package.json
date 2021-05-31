@@ -42,13 +42,33 @@
     "webpack-dev-server": "^3.10.1"
   },
   "dependencies": {
+    "@material/checkbox": "^2.3.0",
+    "@material/chips": "^2.3.0",
+    "@material/data-table": "^4.0.0",
+    "@material/dialog": "^2.3.0",
+    "@material/elevation": "^1.1.0",
+    "@material/form-field": "^2.3.0",
+    "@material/icon-button": "^2.3.0",
+    "@material/menu": "^2.3.0",
+    "@material/menu-surface": "^2.3.0",
+    "@material/radio": "^2.3.0",
+    "@material/ripple": "^2.3.0",
+    "@material/select": "^2.3.1",
+    "@material/snackbar": "^2.3.0",
+    "@material/switch": "^2.3.0",
+    "@material/tab-bar": "^2.3.0",
+    "@material/textfield": "^2.3.1",
+    "@material/theme": "^3.1.0",
+    "@material/top-app-bar": "^4.0.0",
+    "@simonwep/pickr": "^1.4.8",
     "@symfony/webpack-encore": "^0.27.0",
     "babel-plugin-transform-es3-member-expression-literals": "^6.22.0",
     "babel-plugin-transform-es3-property-literals": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.4.1",
     "bootstrap-select": "^1.13.12",
-    "braintree-web": "^3.63.0",
-    "braintree-web-drop-in": "^1.23.0"
+    "getmdl-select": "^2.0.1",
+    "glob": "^7.1.6",
+    "resolve-url-loader": "^3.1.1"
   }
 }

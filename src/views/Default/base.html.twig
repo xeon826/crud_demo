@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" style='background: {{user.background == "1" ? "url(/resources/background_images/background_" ~ random(1,3) ~ ".jpg) no-repeat center center fixed" : "#2f2f2f"}}'>
+  <head>
+    <title>CRUD Demo</title>
+    {% block head %}
+      <meta charset="utf-8">
+      <title>CRUD Demo</title>
+      <meta name="description" content="Unique Pool Covers">
+      <meta name="author" content="Unique Pool Covers">
+      <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+      <link rel="icon" href="/tt365.ico">
+      <link rel="stylesheet" href="/resources/css/roboto.css">
+      <link rel="stylesheet" href="/resources/css/indie_flower.css">
+      <link rel="stylesheet" href="/resources/css/material_icons.css">
+      <link rel="stylesheet" href="/resources/css/fontawesome.css">
+      <link rel="stylesheet" href="{{asset_path}}/bundle.css?ver={{resource_ver}}">
+    {% endblock %}
+  </head>
+  <body id="body" class="light">
+    <div data-barba="wrapper">
+      <div class="mdc-snackbar">
+        <div class="mdc-snackbar__surface">
+          <div class="mdc-snackbar__label" role="status" aria-live="polite">
+            <!-- text goes here -->
+          </div>
+          <div class="mdc-snackbar__actions">
+            <button type="button" class="mdc-button mdc-snackbar__action">Okay</button>
+          </div>
+        </div>
+      </div>
+      <header class="mdc-top-app-bar mdc-top-app-bar--fixed mdc-top-app-bar--dense">
+        <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            {% if user.is_admin %}
+              <button class="drawer-toggle material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</button>
+            {% endif %}
+            <span class="mdc-top-app-bar__title">
+              {{title}}
+            </span>
+          </section>
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+            <button class="user-action-button material-icons mdc-top-app-bar__action-item mdc-icon-button" aria-label="Bookmark this page">more_vert</button>
+          </section>
+          <div class='user-action-dropdown hidden mdc-elevation--z4'>
+            <a class='page-link' href="/users/myprofile">My Profile</a>
+            {% if user.is_owner %}
+              <a class='page-link' href="/billing">Billing</a>
+            {% endif %}
+            <a class='page-link' href="/help">Help</a>
+            <a class='no-prefetch' href="/logout">Logout</a>
+          </div>
+        </div>
+      </header>
+      <div class='row no-margin'>
+        <div id="overlay" class="overlay"></div>
+        <div class='d-md-block col-md-2 side-nav-container dont-show-by-default-on-mobile'>
+          {% include 'Layout/nav.html.twig' with {
+            'title' : title
+          } %}
+        </div>
+
+        <div class='col-12 col-sm-12 col-md-10 container-columns'>
+          <div id="container" class='container-fluid' data-title='{{title}}' data-barba="container" data-barba-namespace="{{namespace ? namespace : 'asdf'}}">
+            {% block content %}{% endblock %}
+          </div>
+        </div>
+      </div>
+      <!--row-->
+      <footer class="site-footer">
+        <!-- <script src="//maps.googleapis.com/maps/api/js?libraries=weather,geometry,visualization,places,drawing&amp;key=AIzaSyDIU-YYF_2JKhMEH0nNUYbBriunNHWdBLM" type="text/javascript"></script> -->
+        <!-- <script src="/resources/js/form-builder.js"></script> -->
+        &copy; Copyright 2019 by
+        <a href="https://app.TimeTracker365.com">TimeTracker365</a>.
+      </footer>
+    </div>
+
+    <div id="loadingScreen" class=''></div>
+
+    {# <script type="text/javascript" src="//unpkg.com/vis-timeline@latest/dist/vis-timeline-graph2d.min.js"></script> #}
+    <script id='bundleJs' src="{{ asset_path }}/bundle.js?ver={{resource_ver}}"></script>
+  </body>
+</html>

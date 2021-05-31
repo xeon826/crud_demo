@@ -1,0 +1,152 @@
+{
+  "user": [{
+    "link": "/users/update?id=",
+    "title": "Update",
+    "classes": "has-form-data quick-menu--edit-user light-primary-variant",
+    "text": "Update",
+    "dialogId": "userTemplate",
+    "icon": "ajax-table__edit fas fa-pencil-alt"
+  }, {
+    "link": "/users/manageAssociations?id=",
+    "title": "Manage Associations",
+    "dialogId": "userAssociationsModal",
+    "classes": "user-associations-open has-form-data light-primary-variant ",
+    "icon": "fas fa-users"
+  }, {
+    "link": "/users/changePassword?id=",
+    "title": "Change Password",
+    "classes": "has-form-data change-user-pass quick-menu--edit-user light-primary-variant",
+    "text": "Change Password",
+    "dialogId": "changePassDialog",
+    "icon": "ajax-table__edit fas fa-key"
+  }, {
+    "link": "/users/delete?id=",
+    "title": "Delete",
+    "text": "Delete",
+    "dialogId": "deleteUserConfirm",
+    "classes": "light-primary-variant no-prefetch quick-link has-form-data",
+    "icon": "ajax-table__delete fas fa-ban"
+  }],
+  "client": [{
+    "link": "/clients/getone?id=",
+    "title": "Update",
+    "dialogId": "clientTemplate",
+    "classes": "light-primary-variant has-form-data",
+    "icon": "fas fa-pencil-alt"
+  }, {
+    "link": "/clients/manageAssociations?id=",
+    "title": "Manage",
+    "classes": "client-associations-open light-primary-variant ",
+    "icon": "fas fa-users"
+  }, {
+    "link": "/clients/delete?id=",
+    "title": "Delete",
+    "dialogId": "deleteClientConfirmation",
+    "classes": "light-primary-variant no-prefetch quick-link has-form-data",
+    "icon": "fas fa-ban",
+    "callback": "populateSearchForm"
+  }],
+  "userclient": [{
+    "link": "/users/update?id=",
+    "title": "Update",
+    "classes": "has-form-data quick-menu--edit-user light-primary-variant",
+    "text": "Update",
+    "dialogId": "userTemplate",
+    "icon": "ajax-table__edit fas fa-pencil-alt"
+  }, {
+    "link": "/users/manageAssociations?id=",
+    "title": "Manage Associations",
+    "dialogId": "userAssociationsModal",
+    "classes": "user-associations-open has-form-data light-primary-variant ",
+    "icon": "fas fa-users"
+  }, {
+    "link": "/users/changePassword?id=",
+    "title": "Change Password",
+    "classes": "has-form-data change-user-pass quick-menu--edit-user light-primary-variant",
+    "text": "Change Password",
+    "dialogId": "changePassDialog",
+    "icon": "ajax-table__edit fas fa-key"
+  }, {
+    "link": "/users/delete?id=",
+    "title": "Delete",
+    "text": "Delete",
+    "dialogId": "deleteUserConfirm",
+    "classes": "light-primary-variant no-prefetch quick-link has-form-data",
+    "icon": "ajax-table__delete fas fa-ban"
+  }],
+  "client": [{
+    "link": "/clients/getone?id=",
+    "title": "Update",
+    "dialogId": "clientTemplate",
+    "classes": "light-primary-variant has-form-data",
+    "icon": "fas fa-pencil-alt"
+  }, {
+    "link": "/clients/manageAssociations?id=",
+    "title": "Manage",
+    "classes": "client-associations-open light-primary-variant ",
+    "icon": "fas fa-users"
+  }, {
+    "link": "/clients/delete?id=",
+    "title": "Delete",
+    "dialogId": "deleteClientConfirmation",
+    "classes": "light-primary-variant no-prefetch quick-link has-form-data",
+    "icon": "fas fa-ban",
+    "callback": "populateSearchForm"
+  }],
+  "schedule": [{
+    "link": "/schedules/getAsJson?id=",
+    "title": "Update",
+    "classes": "edit--schedule has-form-data light-primary-variant ",
+    "dialogId": "shiftTemplate",
+    "icon": " fas fa-pencil-alt"
+  }, {
+    "link": "/schedules/delete?id=",
+    "title": "Delete",
+    "classes": "delete delete--schedule light-primary-variant no-prefetch quick-link",
+    "icon": "fas fa-ban"
+  }],
+  "record": [{
+    "link": "/payroll/update?id=",
+    "title": "Update",
+    "classes": "light-primary-variant has-form-data",
+    "icon": "ajax-table__edit fas fa-pencil-alt",
+    "dialogId": "recordTemplate"
+  }, {
+    "link": "/payroll/round?id=",
+    "title": "Round",
+    "href": "",
+    "classes": "open-round-menu-button light-primary-variant no-prefetch has-affixed-menu",
+    "icon": "ajax-table__round fas fa-adjust",
+    "dataMenu": "round_menu",
+    "callback": "populateSearchForm"
+  }, {
+    "link": "/payroll/delete?id=",
+    "title": "Delete",
+    "dialogId": "deleteRecordConfirm",
+    "classes": "light-primary-variant no-prefetch prevent-default has-form-data",
+    "icon": "ajax-table__delete fas fa-ban"
+  }],
+  "log": [{
+    "link": "/logs/update?id=",
+    "title": "Update",
+    "classes": "light-primary-variant has-form-data",
+    "icon": "ajax-table__edit fas fa-pencil-alt",
+    "dialogId": "logTemplate"
+  }],
+  "template": [{
+    "link": "/users/update?id=",
+    "classes": "light-primary-variant",
+    "icon": "ajax-table__edit fas fa-pencil-alt"
+
+  }, {
+    "link": "/users/delete?id=",
+    "classes": "light-primary-variant no-prefetch ",
+    "icon": "ajax-table__delete fas fa-ban"
+
+  }, {
+    "link": "/record/round?id=",
+    "classes": "light-primary-variant no-prefetch ",
+    "icon": "ajax-table__round fas fa-adjust",
+    "callback": "populateSearchForm"
+  }]
+}

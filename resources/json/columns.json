@@ -1,0 +1,162 @@
+{
+  "user": [{
+    "value": "First Name|first_name",
+    "checked": "1"
+  }, {
+    "value": "Last Name|last_name",
+    "checked": "1"
+  }, {
+    "value": "Login Name|username",
+    "checked": "1"
+  }, {
+    "value": "Email|email",
+    "checked": "1"
+  }, {
+    "value": "Phone|phone",
+    "checked": "1"
+  }, {
+    "value": "Payroll ID|payroll_id",
+    "checked": "0"
+  }, {
+    "value": "Address|address",
+    "checked": "1"
+  }, {
+    "value": "Is Admin|is_admin",
+    "checked": "0"
+  }, {
+    "value": "Created At|created_at",
+    "checked": "0"
+  }, {
+    "value": "Updated At|updated_at",
+    "checked": "0"
+  }],
+  "association": [{
+    "value": "Client|client.name",
+    "checked": "1"
+  }, {
+    "value": "User|user.display_name",
+    "checked": "1"
+  }, {
+    "value": "Is Manager|is_manager",
+    "checked": "1"
+  }, {
+    "value": "Created At|time_created",
+    "checked": "1"
+  }, {
+    "value": "Updated At|last_updated",
+    "checked": "1"
+  }],
+  "log": [{
+    "value": "Entered By|user.display_name",
+    "checked": "1"
+  }, {
+    "value": "Client|client.name",
+    "checked": "1"
+  }, {
+    "value": "Value|value",
+    "checked": "1"
+  }, {
+    "value": "Key|key.title",
+    "checked": "1"
+  }, {
+    "value": "Created At|created_at",
+    "checked": "0"
+  }, {
+    "value": "Updated At|updated_at",
+    "checked": "0"
+  }],
+  "record": [{
+    "value": "User|user.display_name",
+    "checked": "1"
+  }, {
+    "value": "Address|client.address",
+    "checked": "1"
+  }, {
+    "value": "Start|start",
+    "checked": "1"
+  }, {
+    "value": "End|end",
+    "checked": "1"
+  }, {
+    "value": "Hours|.hours",
+    "checked": "0"
+  }, {
+    "value": "Service Code|service_code.name",
+    "checked": "0"
+  }, {
+    "value": "Issue|issue",
+    "checked": "0"
+  }, {
+    "value": "Client|client.name",
+    "checked": "0"
+  }, {
+    "value": "Created At|created_at",
+    "checked": "0"
+  }, {
+    "value": "Updated At|updated_at",
+    "checked": "0"
+  }],
+  "client": [{
+    "value": "Name|name",
+    "checked": "1"
+  }, {
+    "value": "Email|email",
+    "checked": "1"
+  }, {
+    "value": "Phone|phone",
+    "checked": "1"
+  }, {
+    "value": "Address|address",
+    "checked": "1"
+  }, {
+    "value": "Created At|created_at",
+    "checked": "0"
+  }, {
+    "value": "Updated At|updated_at",
+    "checked": "0"
+  }, {
+    "value": "Notes|notes",
+    "checked": "0"
+  }],
+  "schedule": [{
+    "value": "Client|client.name",
+    "checked": "1"
+  }, {
+    "value": "Start|start",
+    "checked": "1"
+  }, {
+    "value": "End|end",
+    "checked": "1"
+  }, {
+    "value": "User|user.display_name",
+    "checked": "1"
+  }, {
+    "value": "Service Code|service_code.name",
+    "checked": "0"
+  }, {
+    "value": "Created At|time_created",
+    "checked": "0"
+  }, {
+    "value": "Is Task|has_task",
+    "checked": "0"
+  }, {
+    "value": "Updated At|last_updated",
+    "checked": "0"
+  }],
+  "activity": [{
+    "value": "Note|note",
+    "checked": "1"
+  }, {
+    "value": "User|user.display_name",
+    "checked": "1"
+  }, {
+    "value": "Type|type.title",
+    "checked": "1"
+  }, {
+    "value": "Category|category.title",
+    "checked": "1"
+  }, {
+    "value": "Moment|moment",
+    "checked": "1"
+  }]
+}

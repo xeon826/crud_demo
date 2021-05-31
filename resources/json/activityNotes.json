@@ -1,0 +1,36 @@
+{
+  "user": {
+    "update": "<carried_out_by> updated a user: <affected>.",
+    "create": "<carried_out_by> created a new user: <affected>.",
+    "delete": "<carried_out_by> deleted a user: <affected>."
+  },
+  "log": {
+    "update": "<carried_out_by> updated a log: <affected>.",
+    "create": "<carried_out_by> created a new log: <affected>.",
+    "delete": "<carried_out_by> deleted a log: <affected>."
+  },
+  "client": {
+    "update": "<carried_out_by> updated a client: <affected>.",
+    "create": "<carried_out_by> created a new client: <affected>.",
+    "delete": "<carried_out_by> deleted a client: <affected>.",
+    "add_to_manager_group": "<affected> was added to the manager group at <client>.",
+    "remove_from_manager_group": "<affected> was removed from the manager group at <client>.",
+    "add_to_employee_group": "<affected> was added to the employee group at <client>.",
+    "remove_from_employee_group": "<affected> was removed from the employee group at <client>."
+  },
+  "report": {
+    "update": "<carried_out_by> updated a report: <affected>.",
+    "create": "<carried_out_by> created a new report: <affected>.",
+    "delete": "<carried_out_by> deleted a report: <affected>.",
+    "clock_in": "<carried_out_by> clocked in at <client>.",
+    "clock_out": "<carried_out_by> clocked out at <client>."
+  },
+  "schedule": {
+    "update": "<carried_out_by> updated a schedule on client: <client>.",
+    "create": "<carried_out_by> created a new schedule for client: <client>.",
+    "delete": "<carried_out_by> deleted a schedule: <client>.",
+    "create_template": "<carried_out_by> created a template: <affected> for client: <client>.",
+    "delete_template": "<carried_out_by> deleted a template: <affected> from client: <client>.",
+    "apply_template": "<carried_out_by> applied a template: <affected> to client: <client>."
+  }
+}

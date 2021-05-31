@@ -24,5 +24,7 @@ class Controller
         $this->asset_path = $asset_path;
         $this->js_bundle_ver = $js_bundle_ver;
         $this->db = new MysqliDb($parameters);
+        $this->asset_path = $asset_path;
+        $this->twig->addGlobal('asset_path', $this->asset_path);
     }
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CRUD Demo</title>
+    {% block head %}
+      <meta charset="utf-8">
+      <title>CRUD Demo</title>
+      <meta name="description" content="Unique Pool Covers">
+      <meta name="author" content="Unique Pool Covers">
+      <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
+      <link rel="icon" href="/tt365.ico">
+      <link rel="stylesheet" href="/resources/css/roboto.css">
+      <link rel="stylesheet" href="/resources/css/indie_flower.css">
+      <link rel="stylesheet" href="/resources/css/material_icons.css">
+      <link rel="stylesheet" href="/resources/css/fontawesome.css">
+      <link rel="stylesheet" href="{{asset_path}}/bundle.css">
+    {% endblock %}
+  </head>
+  <body id="body" class="light">
+    <div class="mdc-data-table">
+      <div class="mdc-data-table__table-container">
+        <table class="mdc-data-table__table" aria-label="Dessert calories">
+          <thead>
+            <tr class="mdc-data-table__header-row">
+              <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><span class='col-header'>Name</span> <i class="fas fa-sort"></i></th>
+              <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col"><span class='col-header'>Address</span> <i class="fas fa-sort"></i></th>
+              <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col"><span class='col-header'>Phone</span> <i class="fas fa-sort"></i></th>
+              <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><span class='col-header'>Email</span> <i class="fas fa-sort"></i></th>
+            </tr>
+          </thead>
+          <tbody class="mdc-data-table__content">
+            <tr class="mdc-data-table__row">
+              <th class="mdc-data-table__cell" scope="row">Frozen yogurt</th>
+              <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
+              <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.0</td>
+              <td class="mdc-data-table__cell">Super tasty</td>
+            </tr>
+            <tr class="mdc-data-table__row">
+              <th class="mdc-data-table__cell" scope="row">Ice cream sandwich</th>
+              <td class="mdc-data-table__cell mdc-data-table__cell--numeric">37</td>
+              <td class="mdc-data-table__cell mdc-data-table__cell--numeric">4.33333333333</td>
+              <td class="mdc-data-table__cell">I like ice cream more</td>
+            </tr>
+            <tr class="mdc-data-table__row">
+              <th class="mdc-data-table__cell" scope="row">Eclair</th>
+              <td class="mdc-data-table__cell mdc-data-table__cell--numeric">24</td>
+              <td class="mdc-data-table__cell mdc-data-table__cell--numeric">6.0</td>
+              <td class="mdc-data-table__cell">New filing flavor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
