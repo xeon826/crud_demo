@@ -23,11 +23,12 @@
         <input id='input-address' name='address' placeholder='Address'/>
         <input id='input-phone' name='phone' placeholder='Phone'/>
         <br/>
-        <input id='sort-title' placeholder='sort-title' />
-        <input id='sort-address' placeholder='sort-address'/>
-        <input id='sort-phone' placeholder='sort-phone'/>
+        <input id='sort-title' name='order_by[title]' type='hidden'/>
+        <input id='sort-address' name='order_by[address]' type='hidden'/>
+        <input id='sort-phone' name='order_by[phone]' type='hidden'/>
       </form>
     </div>
+    <button id='open-add-customer-dialog'>Add Customer</button>
     <div class='center-table'>
       <div class="mdc-data-table">
         <div class="mdc-data-table__table-container">
@@ -56,6 +57,27 @@
       </div>
     </div>
 
+    <form autocomplete='on' class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+      <div class="mdc-dialog__container">
+        <div class="mdc-dialog__surface">
+          <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
+          <h2 class="mdc-dialog__title" id="my-dialog-title"><!-- -->Add Customer
+            <!-- -->
+          </h2>
+          <div class="mdc-dialog__content" id="my-dialog-content">
+          </div>
+          <footer class="mdc-dialog__actions">
+            <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+              <span class="mdc-button__label">Cancel</span>
+            </button>
+            <button type="button" class="submit-button mdc-button mdc-dialog__button">
+              <span class="mdc-button__label">Okay</span>
+            </button>
+          </footer>
+        </div>
+      </div>
+      <div class="mdc-dialog__scrim"></div>
+    </form>
     <script id='bundleJs' src="{{ asset_path }}/bundle.js?ver={{resource_ver}}"></script>
   </body>
 </html>

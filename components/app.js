@@ -1,4 +1,13 @@
-var inputs = document.querySelectorAll('#search-form input');
+import {
+  MDCDialog
+} from '@material/dialog';
+const dialog = new MDCDialog(document.querySelector('.mdc-dialog'));
+
+var inputs = document.querySelectorAll('#search-form input'),
+  add_customer_button = document.getElementById('open-add-customer-dialog');
+add_customer_button.addEventListener('click', function(e) {
+  dialog.open();
+})
 $.fn.extend({
   getData: function() {
     return $(this).find('input').filter(function(index, element) {

@@ -18,8 +18,13 @@ class CustomerController extends Controller
             $customers = Customer::ArrayBuilder()
             ->where('title', '%'.$_POST['title'].'%', 'like')
             ->where('phone', '%'.$_POST['phone'].'%', 'like')
-            ->where('address', '%'.$_POST['address'].'%', 'like')
-            ->get();
+            ->where('address', '%'.$_POST['address'].'%', 'like');
+            if (isset($_POST['order_by'])) {
+                foreach ($_POST['order_by'] as $key=>$value) {
+                    $customers->orderBy($key, $value);
+                }
+            }
+            $customers = $customers->get();
             echo $this->twig->render('Customer/tableContent.html.twig', ['customers' => $customers]);
         }
     }

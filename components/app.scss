@@ -1,9 +1,10 @@
 @import "@material/data-table/mdc-data-table";
+@import "@material/dialog/mdc-dialog";
+@import "@material/button/mdc-button";
 
 td {
   text-align: left;
 }
-
 // align table center
 .center-table {
   width: 100%;
@@ -14,14 +15,12 @@ td {
 .mdc-data-table {
   margin: 50px auto auto;
 }
-
 // form element
 #search-form {
   margin: auto;
   border: 1px solid black;
   padding: 50px 100px;
 }
-
 // form container for centering purposes
 .search-form-container {
   display: flex;
@@ -31,4 +30,10 @@ td {
 
 .mdc-data-table__header-cell {
   cursor: pointer;
+}
+
+#open-add-customer-dialog {
+  display: flex;
+  margin: auto;
+  margin-top:25px;
 }
