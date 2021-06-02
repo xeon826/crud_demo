@@ -1,6 +1,7 @@
 @import "@material/data-table/mdc-data-table";
 @import "@material/dialog/mdc-dialog";
 @import "@material/button/mdc-button";
+@import "@material/textfield/mdc-text-field";
 
 td {
   text-align: left;
@@ -36,4 +37,10 @@ td {
   display: flex;
   margin: auto;
   margin-top:25px;
+}
+
+.mdc-data-table__cell i {
+  margin: 0 10px 0 0;
+  cursor: pointer;
+  color: blue;
 }

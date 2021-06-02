@@ -27,4 +27,13 @@ class Controller
         $this->asset_path = $asset_path;
         $this->twig->addGlobal('asset_path', $this->asset_path);
     }
+
+    protected function log($arg)
+    {
+        if (is_object($arg) || is_array($arg)) {
+            error_log(print_r($arg, true));
+        } else {
+            error_log($arg);
+        }
+    }
 }

@@ -28,13 +28,16 @@
         <input id='sort-phone' name='order_by[phone]' type='hidden'/>
       </form>
     </div>
-    <button id='open-add-customer-dialog'>Add Customer</button>
+    <button id='open-add-customer-dialog' class='mdc-button'>Add Customer</button>
     <div class='center-table'>
       <div class="mdc-data-table">
         <div class="mdc-data-table__table-container">
           <table class="mdc-data-table__table" aria-label="">
             <thead>
               <tr class="mdc-data-table__header-row">
+                <th class="mdc-data-table__header-cell" role="columnheader" scope="col">
+                  <span class='col-header'>Action</span>
+                </th>
                 <th class="mdc-data-table__header-cell" data-sort-input='sort-title' role="columnheader" scope="col">
                   <span class='col-header'>Title</span>
                   <i class="fas fa-sort"></i>
@@ -57,7 +60,7 @@
       </div>
     </div>
 
-    <form autocomplete='on' class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
+    <form autocomplete='on' class="mdc-dialog form-update-customer" action='/customer/update' role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
       <div class="mdc-dialog__container">
         <div class="mdc-dialog__surface">
           <!-- Title cannot contain leading whitespace due to mdc-typography-baseline-top() -->
@@ -65,12 +68,30 @@
             <!-- -->
           </h2>
           <div class="mdc-dialog__content" id="my-dialog-content">
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="my-label-id">Title</span>
+              <input class="mdc-text-field__input" name='title' type="text" aria-labelledby="my-label-id">
+              <span class="mdc-line-ripple"></span>
+            </label>
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="my-label-id">Address</span>
+              <input class="mdc-text-field__input" name='address' type="text" aria-labelledby="my-label-id">
+              <span class="mdc-line-ripple"></span>
+            </label>
+            <label class="mdc-text-field mdc-text-field--filled">
+              <span class="mdc-text-field__ripple"></span>
+              <span class="mdc-floating-label" id="my-label-id">Phone</span>
+              <input class="mdc-text-field__input" name='phone' type="text" aria-labelledby="my-label-id">
+              <span class="mdc-line-ripple"></span>
+            </label>
           </div>
           <footer class="mdc-dialog__actions">
             <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
               <span class="mdc-button__label">Cancel</span>
             </button>
-            <button type="button" class="submit-button mdc-button mdc-dialog__button">
+            <button type="button" class="submit-button mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
               <span class="mdc-button__label">Okay</span>
             </button>
           </footer>
