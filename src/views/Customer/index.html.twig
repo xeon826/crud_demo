@@ -17,14 +17,16 @@
     {% endblock %}
   </head>
   <body id="body" class="light">
+    <form action='/customer/index' method='GET'>
+    </form>
     <div class="mdc-data-table">
       <div class="mdc-data-table__table-container">
         <table class="mdc-data-table__table" aria-label="Dessert calories">
           <thead>
             <tr class="mdc-data-table__header-row">
               <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><span class='col-header'>Name</span> <i class="fas fa-sort"></i></th>
-              <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col"><span class='col-header'>Address</span> <i class="fas fa-sort"></i></th>
-              <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col"><span class='col-header'>Phone</span> <i class="fas fa-sort"></i></th>
+              <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><span class='col-header'>Address</span> <i class="fas fa-sort"></i></th>
+              <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><span class='col-header'>Phone</span> <i class="fas fa-sort"></i></th>
               <th class="mdc-data-table__header-cell" role="columnheader" scope="col"><span class='col-header'>Email</span> <i class="fas fa-sort"></i></th>
             </tr>
           </thead>
@@ -51,5 +53,7 @@
         </table>
       </div>
     </div>
+
+    <script id='bundleJs' src="{{ asset_path }}/bundle.js?ver={{resource_ver}}"></script>
   </body>
 </html>

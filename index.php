@@ -6,7 +6,7 @@ $router = new Router();
 $router->setNamespace('\Controller');
 // Define routes
 $routes = [
-  ['GET|POST', '/index', 'CustomerController@indexAction']
+  ['GET|POST', '/customer/index', 'CustomerController@indexAction']
 ];
 foreach ($routes as $route) {
     $router->match($route[0], $route[1], $route[2]);
