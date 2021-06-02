@@ -4,7 +4,7 @@ const webpack = require('webpack');
 var glob = require("glob");
 
 module.exports = {
-  entry: ['./app.scss', './app.js'],
+  entry: ['./components/app.scss', './components/app.js'],
   output: {
     filename: 'bundle.js',
   },

@@ -41,7 +41,7 @@ class Customer extends dbObject
 
     public function notes()
     {
-        return $this->notes
+        return $this->notes;
     }
 
 }

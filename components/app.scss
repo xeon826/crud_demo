@@ -1,0 +1,34 @@
+@import "@material/data-table/mdc-data-table";
+
+td {
+  text-align: left;
+}
+
+// align table center
+.center-table {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.mdc-data-table {
+  margin: 50px auto auto;
+}
+
+// form element
+#search-form {
+  margin: auto;
+  border: 1px solid black;
+  padding: 50px 100px;
+}
+
+// form container for centering purposes
+.search-form-container {
+  display: flex;
+  margin-top: 100px;
+  background: white;
+}
+
+.mdc-data-table__header-cell {
+  cursor: pointer;
+}
