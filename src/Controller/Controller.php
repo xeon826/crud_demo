@@ -3,8 +3,6 @@ namespace Controller;
 
 use MysqliDb;
 use dbObject;
-use DateTime;
-use DateTimeZone;
 use \Twig\Loader\FilesystemLoader;
 use \Twig\Environment;
 use Twig_SimpleFilter;
