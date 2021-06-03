@@ -8,7 +8,8 @@ $router->setNamespace('\Controller');
 // Define routes
 $routes = [
   ['GET|POST', '/customer/index', 'CustomerController@indexAction'],
-  ['GET|POST', '/customer/update', 'CustomerController@updateAction']
+  ['GET|POST', '/customer/update', 'CustomerController@updateAction'],
+  ['GET|POST', '/customer/delete', 'CustomerController@deleteAction']
 ];
 foreach ($routes as $route) {
     $router->match($route[0], $route[1], $route[2]);

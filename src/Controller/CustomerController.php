@@ -31,17 +31,24 @@ class CustomerController extends Controller
 
     public function updateAction()
     {
-        $this->log($_POST);
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if (isset($_POST['id'])) {
-              $customer = Customer::byId($_POST['id']);
-              $data = $_POST;
-              unset($data['id']);
-              $customer->save($data);
+                $customer = Customer::byId($_POST['id']);
+                $data = $_POST;
+                unset($data['id']);
+                $customer->save($data);
             } else {
-              $customer = new Customer($_POST);
-              $customer->save();
+                $customer = new Customer($_POST);
+                $customer->save();
             }
+        } else {
+            die(json_encode(Customer::byId($_GET['id'])->toArray()));
         }
+    }
+
+    public function deleteAction()
+    {
+        $customer = Customer::byId($_GET['id']);
+        $customer->delete();
     }
 }

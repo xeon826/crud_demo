@@ -41,7 +41,10 @@ text_fields.forEach(function(text_field_el) {
 })
 var inputs = document.querySelectorAll('#search-form input'),
   add_customer_button = document.getElementById('open-add-customer-dialog');
-add_customer_button.addEventListener('click', (e) => dialog.open());
+add_customer_button.addEventListener('click', (e) => {
+  form_update_customer.reset();
+  dialog.open()
+});
 
 // Extended jQuery function for serializing form data
 $.fn.extend({
@@ -132,6 +135,52 @@ let formIsValid = (form) => {
     }
   })
   if (!result)
-    openSnackBar('Form has missing or invalid values, please check again before submitting');
+    openSnackBar('Form has missing or invalid values, please check again before submitting.');
   return result;
 }
+
+// Use identical form that adds and updates customers
+document.addEventListener('click', async function(e) {
+  if (e.target.classList.contains('customer-edit')) {
+    var data = JSON.parse(await doAjax(`/customer/update?id=${e.target.dataset.id}`, 'GET'));
+    form_update_customer.reset();
+    populateForm(data, form_update_customer);
+    dialog.open();
+  } else if (e.target.classList.contains('customer-delete')) {
+    await doAjax(`/customer/delete?id=${e.target.dataset.id}`, 'GET');
+    e.target.parentElement.parentElement.remove();
+    openSnackBar('Customer successfully deleted.');
+  }
+})
+
+
+
+let populateForm = (data, form) => {
+  var formTags = ['SELECT', 'INPUT', 'TEXTAREA'];
+  for (var key in data) {
+    if (!isNaN(key))
+      continue;
+    var field = form.querySelector(`[name=${key}]`);
+    if (field && data[key] || field && data[key] == 0) {
+      if (field.tagName == 'SELECT' && data[key] != null) {
+        var option = field.querySelector(`option[value="${data[key]}"]`),
+          options = field.querySelectorAll('option');
+        options.forEach(function(option) {
+          option.selected = '';
+        });
+        if (option) {
+          option.setAttribute('selected', 'selected');
+        }
+      } else {
+        if (formTags.indexOf(field.tagName) != -1) {
+          field.value = data[key];
+        } else {
+          field.innerHTML = data[key];
+        }
+      }
+      field.dispatchEvent(new Event('input'));
+      field.dispatchEvent(new Event('focus'));
+      field.dispatchEvent(new Event('blur'));
+    }
+  }
+};
