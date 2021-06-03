@@ -23,10 +23,9 @@ class Controller
         require $_SERVER['DOCUMENT_ROOT'].'/Connections/parameters.php';
         $this->loader = new FilesystemLoader($_SERVER['DOCUMENT_ROOT'].'/src/views/');
         $this->twig = new Environment($this->loader);
+        // Url for resource path, usually "http://localhost:8080/" in development and "/" in production
         $this->asset_path = $asset_path;
-        $this->js_bundle_ver = $js_bundle_ver;
         $this->db = new MysqliDb($parameters);
-        $this->asset_path = $asset_path;
         $this->twig->addGlobal('asset_path', $this->asset_path);
     }
 

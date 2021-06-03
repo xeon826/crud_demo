@@ -8,10 +8,8 @@
       <meta name="description" content="CRUD DEMO">
       <meta name="author" content="CRUD DEMO">
       <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1.0">
-      <link rel="icon" href="/tt365.ico">
+      <link rel="icon" href="/">
       <link rel="stylesheet" href="/resources/css/roboto.css">
-      <link rel="stylesheet" href="/resources/css/indie_flower.css">
-      <link rel="stylesheet" href="/resources/css/material_icons.css">
       <link rel="stylesheet" href="/resources/css/fontawesome.css">
       <link rel="stylesheet" href="{{asset_path}}/bundle.css">
     {% endblock %}
@@ -45,15 +43,20 @@
         <input id='sort-title' name='order_by[title]' type='hidden'/>
         <input id='sort-address' name='order_by[address]' type='hidden'/>
         <input id='sort-phone' name='order_by[phone]' type='hidden'/>
+        <!--  -->
       </form>
     </div>
+
+    <!-- Opens modal for adding customers -->
     <button id='open-add-customer-dialog' class='mdc-button mdc-button--raised'>Add Customer</button>
+    <!--  -->
     <div class='center-table'>
       <div class="mdc-data-table">
         <div class="mdc-data-table__table-container">
           <table class="mdc-data-table__table" aria-label="">
             <thead>
               <tr class="mdc-data-table__header-row">
+                <!-- Headers for sorting -->
                 <th class="mdc-data-table__header-cell" role="columnheader" scope="col">
                   <span class='col-header'>Action</span>
                 </th>
@@ -69,16 +72,20 @@
                   <span class='col-header'>Phone</span>
                   <i class="fas fa-sort"></i>
                 </th>
+                <!--  -->
               </tr>
             </thead>
             <tbody class="mdc-data-table__content">
+              <!-- This is regenerated on input -->
               {% include '/Customer/tableContent.html.twig' %}
+              <!--  -->
             </tbody>
           </table>
         </div>
       </div>
     </div>
 
+    <!-- Add/update customer modal -->
     <form autocomplete='on' class="mdc-dialog form-update-customer" action='/customer/update' role="alertdialog" aria-modal="true" aria-labelledby="my-dialog-title" aria-describedby="my-dialog-content">
       <div class="mdc-dialog__container">
         <div class="mdc-dialog__surface">
@@ -119,6 +126,8 @@
       </div>
       <div class="mdc-dialog__scrim"></div>
     </form>
+    <!--  -->
+    <!-- Displays notifications -->
     <div class="mdc-snackbar">
       <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
         <div class="mdc-snackbar__label" aria-atomic="false">
@@ -132,6 +141,7 @@
         </div>
       </div>
     </div>
-    <script id='bundleJs' src="{{ asset_path }}/bundle.js?ver={{resource_ver}}"></script>
+    <!--  -->
+    <script id='bundleJs' src="{{ asset_path }}/bundle.js"></script>
   </body>
 </html>
