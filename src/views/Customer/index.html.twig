@@ -71,19 +71,19 @@
             <label class="mdc-text-field mdc-text-field--filled">
               <span class="mdc-text-field__ripple"></span>
               <span class="mdc-floating-label" id="my-label-id">Title</span>
-              <input class="mdc-text-field__input" name='title' type="text" aria-labelledby="my-label-id">
+              <input class="mdc-text-field__input" name='title' required='required' type="text" minlength='4' maxlength='25' aria-labelledby="my-label-id">
               <span class="mdc-line-ripple"></span>
             </label>
             <label class="mdc-text-field mdc-text-field--filled">
               <span class="mdc-text-field__ripple"></span>
               <span class="mdc-floating-label" id="my-label-id">Address</span>
-              <input class="mdc-text-field__input" name='address' type="text" aria-labelledby="my-label-id">
+              <input class="mdc-text-field__input" name='address' required='required' minlength='9' maxlength='30' type="text" aria-labelledby="my-label-id">
               <span class="mdc-line-ripple"></span>
             </label>
             <label class="mdc-text-field mdc-text-field--filled">
               <span class="mdc-text-field__ripple"></span>
               <span class="mdc-floating-label" id="my-label-id">Phone</span>
-              <input class="mdc-text-field__input" name='phone' type="text" aria-labelledby="my-label-id">
+              <input class="mdc-text-field__input" name='phone' required='required' pattern='[0-9]{3}-[0-9]{3}-[0-9]{4}' type="tel" maxlength='12' minlength='12' aria-labelledby="my-label-id">
               <span class="mdc-line-ripple"></span>
             </label>
           </div>
@@ -99,6 +99,19 @@
       </div>
       <div class="mdc-dialog__scrim"></div>
     </form>
+    <div class="mdc-snackbar">
+      <div class="mdc-snackbar__surface" role="status" aria-relevant="additions">
+        <div class="mdc-snackbar__label" aria-atomic="false">
+          ...
+        </div>
+        <div class="mdc-snackbar__actions" aria-atomic="true">
+          <button type="button" class="mdc-button mdc-snackbar__action">
+            <div class="mdc-button__ripple"></div>
+            <span class="mdc-button__label">Okay</span>
+          </button>
+        </div>
+      </div>
+    </div>
     <script id='bundleJs' src="{{ asset_path }}/bundle.js?ver={{resource_ver}}"></script>
   </body>
 </html>

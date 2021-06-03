@@ -1,10 +1,12 @@
 {% for customer in customers %}
   <tr class="mdc-data-table__row">
-    <th class="mdc-data-table__cell">
-      <i class="fas fa-edit"></i>
-      <i class="fas fa-trash"></i>
-    </th>
-    <th class="mdc-data-table__cell">{{customer.title}}</th>
+    <td class="mdc-data-table__cell">
+      <i class="fas fa-edit customer-edit"></i>
+      <i class="fas fa-trash customer-delete"></i>
+    </td>
+    <td class="mdc-data-table__cell">{{customer.title}}
+      <input type='hidden' value="{{customer.id}}"/>
+    </td>
     <td class="mdc-data-table__cell">{{customer.address}}</td>
     <td class="mdc-data-table__cell">{{customer.phone}}</td>
   </tr>

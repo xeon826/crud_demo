@@ -4,9 +4,35 @@ import {
 import {
   MDCTextField
 } from '@material/textfield';
+import {
+  MDCSnackbar
+} from '@material/snackbar';
+
+// Phone number input
+var telInputs = document.querySelectorAll('input[type="tel"]');
+telInputs.forEach(function(input) {
+  input.addEventListener('input', function(e) {
+    var length = e.target.value.length,
+      value = e.target.value;
+    if (length == 3 | length == 7 && e.data != null)
+      e.target.value = value + '-';
+    if (e.data == null && value.slice(-1) == '-' || isNaN(e.data) && e.target.value.length != 12)
+      e.target.value = value.slice(0, -1);
+  })
+});
 
 // Initialize MDCDialog on HTMLElement
 const dialog = new MDCDialog(document.querySelector('.mdc-dialog'));
+
+// Notification window
+var snackbarEl = document.querySelector('.mdc-snackbar');
+console.log(snackbarEl);
+const snackbar = new MDCSnackbar(document.querySelector('.mdc-snackbar'));
+
+function openSnackBar(text) {
+  snackbar.labelText = text;
+  snackbar.open();
+}
 
 // Same as above but for text fields
 var text_fields = document.querySelectorAll('.mdc-text-field');
@@ -75,9 +101,14 @@ sort_headers.forEach(function(header) {
 var submit_button = document.querySelector('.submit-button'),
   form_update_customer = document.querySelector('.form-update-customer');
 submit_button.addEventListener('click', async function(e) {
+  if (!formIsValid(form_update_customer)) {
+    e.stopPropagation();
+    e.preventDefault();
+    return;
+  }
   var data = $(form_update_customer).getData();
-  console.log(data);
   await doAjax('/customer/update', 'POST', data);
+  openSnackBar('Customer was successfully updated.');
   populate();
 })
 
@@ -88,5 +119,19 @@ async function doAjax(url, type, data) {
     type: type,
     data: data
   });
+  return result;
+}
+
+// We're using an asynchronous method for submitting data so use this to check validity before sending
+let formIsValid = (form) => {
+  let result = 1,
+    fields = form.querySelectorAll('input, select, radio, textarea');
+  fields.forEach((field) => {
+    if (!field.checkValidity()) {
+      result = 0;
+    }
+  })
+  if (!result)
+    openSnackBar('Form has missing or invalid values, please check again before submitting');
   return result;
 }

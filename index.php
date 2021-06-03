@@ -3,6 +3,7 @@ use \Bramus\Router\Router;
 
 require __DIR__ . '/vendor/autoload.php';
 $router = new Router();
+// Set namespace
 $router->setNamespace('\Controller');
 // Define routes
 $routes = [

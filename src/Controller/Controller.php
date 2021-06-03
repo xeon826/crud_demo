@@ -18,6 +18,8 @@ class Controller
     protected $asset_path;
     public function __construct()
     {
+        // Hypothetically if there were more than two controllers in this demo, they would all inherit from this parent class.
+        // I've kept it here for illustration purposes
         require $_SERVER['DOCUMENT_ROOT'].'/Connections/parameters.php';
         $this->loader = new FilesystemLoader($_SERVER['DOCUMENT_ROOT'].'/src/views/');
         $this->twig = new Environment($this->loader);
@@ -28,6 +30,7 @@ class Controller
         $this->twig->addGlobal('asset_path', $this->asset_path);
     }
 
+    // Easily print data to error_log
     protected function log($arg)
     {
         if (is_object($arg) || is_array($arg)) {
